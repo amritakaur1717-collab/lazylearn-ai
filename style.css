@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b0b14;
+    --card: #151522;
+    --purple: #a78bfa;
+    --pink: #f0abfc;
+    --text: #f5f3ff;
+    --muted: #a5a3b8;
+    --border: #2b2940;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    background-image:
+        radial-gradient(ellipse at 50% 0%, #38205a55, transparent 55%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo span,
+.hero h1 span {
+    color: var(--purple);
+}
+
+.tagline {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.container {
+    width: min(760px, 90%);
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 76px 0 38px;
+}
+
+.eyebrow {
+    color: var(--pink);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 66px);
+    line-height: 1.12;
+    margin: 20px 0;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.study-card,
+.result-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 70px #00000025;
+}
+
+.study-card label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+textarea,
+select {
+    width: 100%;
+    background: #0e0e19;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    color: var(--text);
+    font: inherit;
+    margin-bottom: 24px;
+    outline: none;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+textarea:focus,
+select:focus {
+    border-color: var(--purple);
+}
+
+textarea::placeholder {
+    color: #77758c;
+}
+
+select {
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(100deg, #8b5cf6, #c084fc);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
+.hint {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.6;
+}
+
+.result-card {
+    margin-top: 24px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.result-card h2 {
+    color: var(--purple);
+    margin-bottom: 16px;
+    font-size: 21px;
+}
+
+.result-card[hidden] {
+    display: none;
+}
+
+#result {
+    white-space: pre-wrap;
+    color: #e4e1f0;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 38px 0;
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        padding: 20px 5%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .tagline {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding-top: 55px;
+    }
+
+    .study-card,
+    .result-card {
+        padding: 20px;
+    }
+}

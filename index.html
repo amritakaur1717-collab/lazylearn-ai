@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LazyLearn AI | Smart Study Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="logo" href="#">LazyLearn<span> AI.</span></a>
+        <span class="tagline">Study smarter, not harder ✨</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="eyebrow">YOUR PERSONAL AI STUDY BUDDY</span>
+            <h1>Learn more.<br><span>Stress less.</span></h1>
+            <p>Turn your notes into summaries, flashcards, and quizzes in seconds.</p>
+        </section>
+
+        <section class="study-card">
+            <label for="notes">📚 Paste your study notes</label>
+            <textarea id="notes" placeholder="Paste your notes here and let AI do the hard work..."></textarea>
+
+            <label for="task">What would you like to create?</label>
+            <select id="task">
+                <option value="summary">✨ Smart summary</option>
+                <option value="questions">❓ Important questions</option>
+                <option value="flashcards">🗂️ Flashcards</option>
+                <option value="quiz">🧠 Practice quiz</option>
+                <option value="explain">💡 Simple explanation</option>
+            </select>
+
+            <button id="generateBtn">Generate with AI ↗</button>
+            <p class="hint">Your notes are your starting point. AI helps you study smarter.</p>
+        </section>
+
+        <section class="result-card" id="resultCard" hidden>
+            <h2 id="resultTitle">Your study guide</h2>
+            <div id="result"></div>
+        </section>
+
+        <footer>Made for curious minds 💜 · Powered by open-source AI</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
